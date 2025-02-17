@@ -1,0 +1,20 @@
+{
+    "name": "mnhazim/package-setup",
+    "description": "Laravel project setup automation",
+    "type": "library",
+    "license": "MIT",
+    "prefer-stable": true,
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Mnhazim\\PackageSetup\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mnhazim\\PackageSetup\\PackageSetupServiceProvider"
+            ]
+        }
+    }
+}
