@@ -19,6 +19,18 @@ return [
         //     ]
         // ],
         [
+            'name' => 'Breeze by Laravel',
+            'package' => 'laravel/breeze --dev',
+            'installer' => \Mnhazim\PackageSetup\Installers\BreezeInstaller::class,
+            'has_migrations' => true,
+            'publishes' => [
+                [
+                    'provider' => 'MarvinLabs\DiscordLogger\ServiceProvider',
+                    'tag' => null
+                ],
+            ]
+        ],
+        [
             'name' => 'Spatie Laravel Permission',
             'package' => 'spatie/laravel-permission',
             'installer' => \Mnhazim\PackageSetup\Installers\BasicStepInstaller::class,
@@ -26,6 +38,18 @@ return [
             'publishes' => [
                 [
                     'provider' => 'Spatie\Permission\PermissionServiceProvider',
+                    'tag' => null
+                ],
+            ]
+        ],
+        [
+            'name' => 'Discord Logger by Marvinlabs',
+            'package' => 'marvinlabs/laravel-discord-logger',
+            'installer' => \Mnhazim\PackageSetup\Installers\BasicStepInstaller::class,
+            'has_migrations' => true,
+            'publishes' => [
+                [
+                    'provider' => 'MarvinLabs\DiscordLogger\ServiceProvider',
                     'tag' => null
                 ],
             ]
