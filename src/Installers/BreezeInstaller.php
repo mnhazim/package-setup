@@ -26,7 +26,8 @@ class BreezeInstaller extends PackageInstaller
             return;
         }
 
-        Artisan::call('breeze:install');
+        // $command = "breeze:install {$this->config['stack']}";
+        Artisan::call('breeze:install', ['stack' => $this->config['stack']]);
         Artisan::call('migrate');
         
         $this->command->info($this->config['name'] . ' installation completed!');

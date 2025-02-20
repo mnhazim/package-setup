@@ -36,9 +36,9 @@ class BasicStepInstaller extends PackageInstaller
             ];
 
             if($publish['tag']){
-                $params[] = ['--tag' => $publish['tag']];
+                $params['--tag'] = $publish['tag'];
             }
-
+            
             Artisan::call('vendor:publish', $params);
         }
 
